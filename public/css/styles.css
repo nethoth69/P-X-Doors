@@ -660,6 +660,59 @@ form textarea { min-height: 100px; resize: vertical; }
 }
 
 /* ==========================================================================
+   Process (numbered steps) & about blurb
+   ========================================================================== */
+
+.process {
+  padding: 4rem 0 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.process-steps {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.process-steps li {
+  border-top: 2px solid var(--brass);
+  padding-top: 1rem;
+}
+
+.process-steps .step-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--brass-dark);
+  margin-bottom: 0.4rem;
+}
+
+.process-steps h4 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.process-steps p { font-size: 0.88rem; margin: 0; }
+
+.about-blurb {
+  padding: 3.5rem 0;
+}
+
+.about-blurb h2 { margin-bottom: 0.8rem; }
+.about-blurb .lead { font-size: 1.05rem; max-width: 68ch; }
+
+@media (max-width: 900px) {
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .process-steps { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 

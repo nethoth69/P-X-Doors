@@ -2,6 +2,18 @@
 
 A storefront for selling internal, external and steel doors, where every door can include installation and an after-service care plan chosen at checkout. Built as a small Express backend + plain HTML/CSS/JS frontend — no build step, no framework.
 
+Because it has a live backend (cart, checkout, order storage, admin area), it needs a Node host — it can't run on GitHub Pages, which only serves static files. GitHub is fine for the source code itself; deploy the running site to something like Render or Railway (steps below).
+
+## Deploying it (Render)
+
+1. Push this code to a GitHub repo (already done if you're reading this from the repo).
+2. Go to [render.com](https://render.com), sign in, and choose **New → Web Service**, then connect this repo. Render reads `render.yaml` automatically and fills in the build/start commands.
+   - Or use this one-click link once the repo is pushed: `https://render.com/deploy?repo=https://github.com/nethoth69/P-X-Doors`
+3. Before the first deploy, set at least `ADMIN_PASSWORD` in Render's environment variables tab (it's marked `sync: false` in `render.yaml`, meaning Render will prompt you for it rather than storing a default). Add the SMTP/WhatsApp variables too if you want notifications live from day one.
+4. Deploy. Render gives you a URL like `https://px-doors.onrender.com`.
+
+**One thing to know:** orders are currently stored in a plain file (`data/orders.json`) on the server's own disk. On Render's free tier, that file does *not* survive a redeploy (a new deploy starts from a fresh container) — it does survive the service sleeping/waking from inactivity. That's fine for testing, but before you're taking real orders, either upgrade to a plan with a persistent disk or move order storage to a real database (see the note under "How ordering works" below). Don't rely on `data/orders.json` for real order history until one of those is in place.
+
 ## Running it locally
 
 ```bash
