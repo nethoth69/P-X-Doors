@@ -1,0 +1,1192 @@
+{
+  "currency": "GHS",
+  "categories": [
+    {
+      "id": "internal",
+      "label": "Internal Doors",
+      "tagline": "For bedrooms, offices and interior rooms"
+    },
+    {
+      "id": "external",
+      "label": "External Doors",
+      "tagline": "Entry doors built for weather and security"
+    },
+    {
+      "id": "steel",
+      "label": "Steel Doors",
+      "tagline": "Reinforced doors for maximum security"
+    }
+  ],
+  "products": [
+    {
+      "id": "int-flush-01",
+      "category": "internal",
+      "name": "Flush Panel Door",
+      "summary": "A clean, flat-faced door that fits any room without drawing attention to itself.",
+      "basePrice": 450,
+      "image": "door-internal-flush.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 80cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 90cm wide",
+            "delta": 80
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 150
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Natural wood",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "White painted",
+            "delta": 40
+          },
+          {
+            "id": "walnut",
+            "label": "Walnut stain",
+            "delta": 60
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 150
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 220
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 90
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "int-panel-01",
+      "category": "internal",
+      "name": "4-Panel Timber Door",
+      "summary": "Traditional raised-panel design in solid timber, for a more finished interior look.",
+      "basePrice": 620,
+      "image": "door-internal-panel.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 80cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 90cm wide",
+            "delta": 80
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 150
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Natural wood",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "White painted",
+            "delta": 40
+          },
+          {
+            "id": "walnut",
+            "label": "Walnut stain",
+            "delta": 60
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 150
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 220
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 90
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "int-glazed-01",
+      "category": "internal",
+      "name": "Glazed Internal Door",
+      "summary": "A timber frame with a clear glass panel, for offices and rooms that need natural light to pass through.",
+      "basePrice": 780,
+      "image": "door-internal-glazed.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 80cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 90cm wide",
+            "delta": 80
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 150
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Natural wood",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "White painted",
+            "delta": 40
+          },
+          {
+            "id": "walnut",
+            "label": "Walnut stain",
+            "delta": 60
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 150
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 220
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 90
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "ext-timber-01",
+      "category": "external",
+      "name": "Solid Timber Entry Door",
+      "summary": "A heavy solid-timber front door, weather-treated and built for daily use at a main entrance.",
+      "basePrice": 1450,
+      "image": "door-external-timber.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 90cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 100cm wide",
+            "delta": 100
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 180
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Natural wood",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "Painted – any colour",
+            "delta": 90
+          },
+          {
+            "id": "weather",
+            "label": "Weatherproof stain",
+            "delta": 70
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 250
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 350
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 90
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "ext-composite-01",
+      "category": "external",
+      "name": "Composite Entry Door",
+      "summary": "A low-maintenance entry door that resists warping and fading better than solid timber.",
+      "basePrice": 1850,
+      "image": "door-external-composite.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 90cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 100cm wide",
+            "delta": 100
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 180
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Woodgrain finish",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "Painted – any colour",
+            "delta": 90
+          },
+          {
+            "id": "weather",
+            "label": "Weatherproof stain",
+            "delta": 70
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 250
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 350
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 90
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "ext-french-01",
+      "category": "external",
+      "name": "French External Door",
+      "summary": "A double-leaf glazed door for patios and garden entrances, framed in weather-treated timber.",
+      "basePrice": 2600,
+      "image": "door-external-french.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 150cm wide (both leaves)",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 180cm wide (both leaves)",
+            "delta": 220
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 300
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Natural wood",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "Painted – any colour",
+            "delta": 120
+          },
+          {
+            "id": "weather",
+            "label": "Weatherproof stain",
+            "delta": 100
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 320
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 420
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 110
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 190
+          }
+        ]
+      }
+    },
+    {
+      "id": "steel-standard-01",
+      "category": "steel",
+      "name": "Standard Steel Security Door",
+      "summary": "A solid steel door with a multi-point lock, built as an affordable security upgrade.",
+      "basePrice": 1200,
+      "image": "door-steel-standard.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 90cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 100cm wide",
+            "delta": 100
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 180
+          }
+        ],
+        "finish": [
+          {
+            "id": "grey",
+            "label": "Matte grey powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "black",
+            "label": "Black powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "custom",
+            "label": "Custom colour powder-coat",
+            "delta": 120
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 300
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 420
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (lock & hinge service, rust check)",
+            "delta": 100
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 180
+          }
+        ]
+      }
+    },
+    {
+      "id": "steel-reinforced-01",
+      "category": "steel",
+      "name": "Reinforced Steel Door",
+      "summary": "Heavy-duty steel construction for warehouses, shops and high-security entrances.",
+      "basePrice": 1950,
+      "image": "door-steel-reinforced.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 100cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 120cm wide",
+            "delta": 150
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 220
+          }
+        ],
+        "finish": [
+          {
+            "id": "grey",
+            "label": "Matte grey powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "black",
+            "label": "Black powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "custom",
+            "label": "Custom colour powder-coat",
+            "delta": 140
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 350
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 480
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (lock & hinge service, rust check)",
+            "delta": 110
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 200
+          }
+        ]
+      }
+    },
+    {
+      "id": "steel-vision-01",
+      "category": "steel",
+      "name": "Steel Door with Vision Panel",
+      "summary": "A steel security door with a reinforced glass panel, so you can see who's at the door.",
+      "basePrice": 1600,
+      "image": "door-steel-vision.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 90cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 100cm wide",
+            "delta": 100
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 180
+          }
+        ],
+        "finish": [
+          {
+            "id": "grey",
+            "label": "Matte grey powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "black",
+            "label": "Black powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "custom",
+            "label": "Custom colour powder-coat",
+            "delta": 120
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 300
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 420
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (lock & hinge service, rust check)",
+            "delta": 100
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 180
+          }
+        ]
+      }
+    },
+    {
+      "id": "int-sliding-01",
+      "category": "internal",
+      "name": "Sliding Pocket Door",
+      "summary": "Slides into the wall cavity instead of swinging open — ideal for tight rooms.",
+      "basePrice": 690,
+      "image": "door-internal-sliding.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 80cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 90cm wide",
+            "delta": 80
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 150
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Natural wood",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "White painted",
+            "delta": 40
+          },
+          {
+            "id": "walnut",
+            "label": "Walnut stain",
+            "delta": 60
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 150
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 220
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 90
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "int-barn-01",
+      "category": "internal",
+      "name": "Barn-Style Sliding Door",
+      "summary": "A statement sliding door on an exposed track, popular for open-plan living areas.",
+      "basePrice": 850,
+      "image": "door-internal-barn.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 80cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 90cm wide",
+            "delta": 80
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 150
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Natural wood",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "White painted",
+            "delta": 40
+          },
+          {
+            "id": "walnut",
+            "label": "Walnut stain",
+            "delta": 60
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 150
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 220
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 90
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "ext-hybrid-01",
+      "category": "external",
+      "name": "Steel-Reinforced Timber Door",
+      "summary": "Timber on the outside, steel-reinforced core inside — the look of wood with added security.",
+      "basePrice": 2100,
+      "image": "door-external-hybrid.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 90cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 100cm wide",
+            "delta": 100
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 180
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Natural wood",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "Painted – any colour",
+            "delta": 90
+          },
+          {
+            "id": "weather",
+            "label": "Weatherproof stain",
+            "delta": 70
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 250
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 350
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 90
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "ext-louvered-01",
+      "category": "external",
+      "name": "Louvered External Door",
+      "summary": "Ventilated slats for kitchen and utility back doors, keeping airflow moving.",
+      "basePrice": 1300,
+      "image": "door-external-louvered.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 90cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 100cm wide",
+            "delta": 100
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 180
+          }
+        ],
+        "finish": [
+          {
+            "id": "natural",
+            "label": "Natural wood",
+            "delta": 0
+          },
+          {
+            "id": "painted",
+            "label": "Painted – any colour",
+            "delta": 90
+          },
+          {
+            "id": "weather",
+            "label": "Weatherproof stain",
+            "delta": 70
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 250
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 350
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (hinge & lock check, adjustments)",
+            "delta": 90
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 160
+          }
+        ]
+      }
+    },
+    {
+      "id": "steel-cladding-01",
+      "category": "steel",
+      "name": "Steel Door with Cladding Finish",
+      "summary": "Full steel security core with a wood-look cladding finish, for when you don't want it to look like a steel door.",
+      "basePrice": 1750,
+      "image": "door-steel-cladding.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 90cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 100cm wide",
+            "delta": 100
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 180
+          }
+        ],
+        "finish": [
+          {
+            "id": "grey",
+            "label": "Matte grey powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "black",
+            "label": "Black powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "custom",
+            "label": "Custom colour powder-coat",
+            "delta": 120
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 300
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 420
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (lock & hinge service, rust check)",
+            "delta": 100
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 180
+          }
+        ]
+      }
+    },
+    {
+      "id": "steel-utility-01",
+      "category": "steel",
+      "name": "Compact Steel Utility Door",
+      "summary": "A smaller, no-frills steel door for stores, back entrances and utility rooms.",
+      "basePrice": 980,
+      "image": "door-steel-utility.svg",
+      "options": {
+        "size": [
+          {
+            "id": "std",
+            "label": "Standard – 90cm wide",
+            "delta": 0
+          },
+          {
+            "id": "wide",
+            "label": "Wide – 100cm wide",
+            "delta": 100
+          },
+          {
+            "id": "custom",
+            "label": "Custom size – confirmed at checkout",
+            "delta": 180
+          }
+        ],
+        "finish": [
+          {
+            "id": "grey",
+            "label": "Matte grey powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "black",
+            "label": "Black powder-coat",
+            "delta": 0
+          },
+          {
+            "id": "custom",
+            "label": "Custom colour powder-coat",
+            "delta": 120
+          }
+        ],
+        "installation": [
+          {
+            "id": "self",
+            "label": "I'll fit it myself",
+            "delta": 0
+          },
+          {
+            "id": "standard",
+            "label": "Standard installation by our team",
+            "delta": 300
+          },
+          {
+            "id": "full",
+            "label": "Installation + removal of old door",
+            "delta": 420
+          }
+        ],
+        "afterService": [
+          {
+            "id": "none",
+            "label": "None",
+            "delta": 0
+          },
+          {
+            "id": "care6",
+            "label": "6-month care plan (lock & hinge service, rust check)",
+            "delta": 100
+          },
+          {
+            "id": "care12",
+            "label": "12-month care plan + priority callout",
+            "delta": 180
+          }
+        ]
+      }
+    }
+  ]
+}
