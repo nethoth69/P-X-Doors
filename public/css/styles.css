@@ -652,6 +652,19 @@ form textarea { min-height: 100px; resize: vertical; }
 
 .site-footer p, .site-footer a { color: #C9C3B4; font-size: 0.9rem; }
 .site-footer a:hover { color: var(--white); }
+
+.pixelxcript-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid #454B50;
+}
+
+.pixelxcript-badge img { flex-shrink: 0; }
+.pixelxcript-badge span { font-size: 0.82rem; color: #9A9484; }
+
 .site-footer .foot-bottom {
   border-top: 1px solid #454B50;
   font-size: 0.8rem;

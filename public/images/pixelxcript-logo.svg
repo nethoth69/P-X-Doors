@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<defs>
+<linearGradient id="top" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0752C8"/><stop offset="1" stop-color="#18DDF4"/></linearGradient>
+<linearGradient id="ul" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0B68D8"/><stop offset="1" stop-color="#062B8A"/></linearGradient>
+<linearGradient id="ur" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#062B8A"/><stop offset="1" stop-color="#176BE5"/></linearGradient>
+<linearGradient id="lr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13DDF4"/><stop offset="1" stop-color="#0793DD"/></linearGradient>
+<linearGradient id="ll" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0793DD"/><stop offset="1" stop-color="#18DDF4"/></linearGradient>
+<linearGradient id="bottom" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1459D4"/><stop offset="1" stop-color="#062A83"/></linearGradient>
+<linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#031E70" stop-opacity=".8"/><stop offset="1" stop-color="#0A62D8" stop-opacity=".05"/></linearGradient>
+<linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#08BCEB" stop-opacity=".05"/><stop offset="1" stop-color="#A5F7FF" stop-opacity=".55"/></linearGradient>
+</defs>
+<g stroke="none">
+<path d="M250 66H750L625 283H375Z" fill="url(#top)"/><path d="M250 66L375 283H625L750 66Z" fill="url(#light)" opacity=".22"/>
+<path d="M750 66L933 500H683L625 283Z" fill="url(#ur)"/><path d="M750 66L933 500H683L625 283Z" fill="url(#dark)" opacity=".45"/>
+<path d="M933 500L750 934L625 717L683 500Z" fill="url(#lr)"/><path d="M933 500L750 934L625 717L683 500Z" fill="url(#light)" opacity=".18"/>
+<path d="M750 934H250L375 717H625Z" fill="url(#bottom)"/><path d="M250 934L375 717H625L750 934Z" fill="url(#dark)" opacity=".28"/>
+<path d="M250 934L67 500H317L375 717Z" fill="url(#ll)"/><path d="M67 500H317L375 717L250 934Z" fill="url(#light)" opacity=".18"/>
+<path d="M67 500L250 66L375 283L317 500Z" fill="url(#ul)"/><path d="M67 500L250 66L375 283L317 500Z" fill="url(#dark)" opacity=".35"/>
+</g>
+</svg>
