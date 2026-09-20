@@ -3,9 +3,13 @@ require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const session = require('express-session');
+const bcrypt = require('bcryptjs');
 
 const { notifyNewOrder, buildWhatsAppLink } = require('./lib/notify');
 const { requireAdmin } = require('./lib/adminAuth');
+const { passport, googleEnabled } = require('./lib/passportConfig');
+const users = require('./lib/users');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,6 +18,14 @@ const DOORS_PATH = path.join(__dirname, 'data', 'doors.json');
 const ORDERS_PATH = path.join(__dirname, 'data', 'orders.json');
 
 app.use(express.json());
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'px-doors-dev-secret-change-me',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Make sure orders.json exists
@@ -64,7 +76,7 @@ app.post('/api/orders', (req, res) => {
     orderNumber,
     createdAt: new Date().toISOString(),
     status: 'received',
-    customer,
+    customer: { ...customer, userId: req.user ? req.user.id : null },
     items,
     total
   };
@@ -77,6 +89,83 @@ app.post('/api/orders', (req, res) => {
   notifyNewOrder(order).catch(() => {});
 
   res.status(201).json({ orderNumber, total, whatsappLink: buildWhatsAppLink(order) });
+});
+
+// ---- Accounts: email/password + Google ----
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email || ''));
+}
+
+app.get('/api/auth/config', (req, res) => {
+  res.json({ googleEnabled });
+});
+
+app.get('/api/auth/me', (req, res) => {
+  res.json({ user: req.user ? users.toPublic(req.user) : null });
+});
+
+app.post('/api/auth/signup', async (req, res) => {
+  const { name, email, password } = req.body || {};
+
+  if (!name || !name.trim()) return res.status(400).json({ error: 'Please enter your name.' });
+  if (!isValidEmail(email)) return res.status(400).json({ error: 'Please enter a valid email address.' });
+  if (!password || password.length < 8) return res.status(400).json({ error: 'Password must be at least 8 characters.' });
+
+  if (users.findByEmail(email)) {
+    return res.status(409).json({ error: 'An account with that email already exists. Try logging in instead.' });
+  }
+
+  const passwordHash = await bcrypt.hash(password, 10);
+  const user = users.createUser({ name: name.trim(), email, passwordHash });
+
+  req.login(user, (err) => {
+    if (err) return res.status(500).json({ error: 'Account created, but signing you in failed. Please log in.' });
+    res.status(201).json({ user: users.toPublic(user) });
+  });
+});
+
+app.post('/api/auth/login', async (req, res) => {
+  const { email, password } = req.body || {};
+  const user = users.findByEmail(email || '');
+
+  if (!user || !user.passwordHash) {
+    return res.status(401).json({ error: 'No account with that email and password. If you signed up with Google, use the Google button instead.' });
+  }
+
+  const match = await bcrypt.compare(password || '', user.passwordHash);
+  if (!match) return res.status(401).json({ error: 'Incorrect email or password.' });
+
+  req.login(user, (err) => {
+    if (err) return res.status(500).json({ error: 'Something went wrong logging you in.' });
+    res.json({ user: users.toPublic(user) });
+  });
+});
+
+app.post('/api/auth/logout', (req, res) => {
+  req.logout(() => {
+    res.json({ ok: true });
+  });
+});
+
+if (googleEnabled) {
+  app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+  app.get('/auth/google/callback',
+    passport.authenticate('google', { failureRedirect: '/login.html?error=google' }),
+    (req, res) => res.redirect('/account.html')
+  );
+} else {
+  app.get('/auth/google', (req, res) => {
+    res.status(503).send('Google sign-in isn\'t configured yet. Set GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET.');
+  });
+}
+
+// GET /api/orders/mine - a logged-in customer's own order history
+app.get('/api/orders/mine', (req, res) => {
+  if (!req.user) return res.status(401).json({ error: 'Log in to see your orders.' });
+  const ordersData = readJSON(ORDERS_PATH);
+  const mine = ordersData.orders.filter(o => o.customer && o.customer.userId === req.user.id).reverse();
+  res.json({ orders: mine });
 });
 
 // ---- Admin area: everything below requires HTTP Basic Auth ----

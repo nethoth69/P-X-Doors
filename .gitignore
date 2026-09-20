@@ -1,4 +1,5 @@
 node_modules/
 data/orders.json
+data/users.json
 .env
 .env.local

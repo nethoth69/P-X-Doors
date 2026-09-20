@@ -585,6 +585,7 @@ form .field { margin-bottom: 1.3rem; }
 form input[type="text"],
 form input[type="tel"],
 form input[type="email"],
+form input[type="password"],
 form textarea {
   width: 100%;
   padding: 0.75rem 0.9rem;
@@ -723,6 +724,96 @@ form textarea { min-height: 100px; resize: vertical; }
 
 @media (max-width: 560px) {
   .process-steps { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   Auth pages (login / signup / account)
+   ========================================================================== */
+
+.auth-page .wrap {
+  max-width: 440px;
+  padding-top: 3.5rem;
+  padding-bottom: 4rem;
+}
+
+.auth-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 2.2rem 2rem;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  background: var(--white);
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+.btn-google:hover { background: var(--bg); }
+.btn-google svg { width: 18px; height: 18px; }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 1.6rem 0;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.auth-switch {
+  margin-top: 1.4rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.auth-switch a { color: var(--rust); font-weight: 600; }
+
+.form-error {
+  background: #F3E1DC;
+  border: 1px solid var(--rust);
+  color: var(--rust-dark);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.88rem;
+  margin-bottom: 1.2rem;
+  display: none;
+}
+
+.form-error.visible { display: block; }
+
+.account-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.account-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--brass);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
 }
 
 /* ==========================================================================

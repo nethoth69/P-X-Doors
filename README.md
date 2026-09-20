@@ -34,11 +34,14 @@ npm run dev
 
 ```
 server.js              Express app: serves the site + a small JSON API
-.env.example           Template for SMTP, WhatsApp and admin settings — copy to .env
+.env.example           Template for SMTP, WhatsApp, admin and account settings — copy to .env
 lib/notify.js          Order email notifications + WhatsApp click-to-chat link
 lib/adminAuth.js        HTTP Basic Auth guard for the admin area
+lib/users.js            Account store (email/password + Google users)
+lib/passportConfig.js   Google OAuth setup (only activates if configured) + session handling
 data/doors.json         The catalog — products, categories, prices, options
 data/orders.json        Orders placed through the site (auto-created, git-ignored)
+data/users.json         Registered accounts (auto-created, git-ignored)
 admin/admin.html         Orders dashboard (only reachable via /admin, password-protected)
 public/
   index.html             Homepage
@@ -47,6 +50,9 @@ public/
   cart.html              Cart
   checkout.html          Customer details form
   confirmation.html      Order confirmation
+  login.html             Log in (email/password + Google)
+  signup.html            Create an account (email/password + Google)
+  account.html           Profile + order history, log out
   css/styles.css         Site styling
   css/admin.css          Extra styling for the admin table
   js/                    Page logic (cart is shared via localStorage)
@@ -75,6 +81,25 @@ Visiting `/admin` shows every order (newest first) with customer details and a d
 
 Set `ADMIN_PASSWORD` (and optionally `ADMIN_USER`, which defaults to `admin`) in `.env`. Until `ADMIN_PASSWORD` is set, `/admin` is blocked rather than left open with a default password.
 
+### Accounts (sign up / log in)
+
+Customers can create an account with name, email and password, or with "Continue with Google." Either way, they get a **My orders** page (`account.html`) that lists orders placed while logged in, and checkout pre-fills their name and email.
+
+**Email/password** works with no setup beyond `SESSION_SECRET` in `.env` (any long random string — generate one with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`). Passwords are hashed with bcrypt before being stored.
+
+**Google sign-in** needs a one-time setup in Google Cloud Console:
+1. Go to [console.cloud.google.com](https://console.cloud.google.com), create a project (or use an existing one).
+2. **APIs & Services → OAuth consent screen** — set it up for "External" users, add your app name and support email.
+3. **APIs & Services → Credentials → Create Credentials → OAuth client ID**, application type "Web application."
+4. Under "Authorized redirect URIs," add:
+   - `http://localhost:3000/auth/google/callback` (for local testing)
+   - `https://your-render-url.onrender.com/auth/google/callback` (your live site)
+5. Copy the generated Client ID and Client Secret into `.env` as `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`. Set `GOOGLE_CALLBACK_URL` to match whichever URL you're running on.
+
+If those two variables are left blank, the "Continue with Google" button automatically hides itself on the login and signup pages — email/password still works fine without it.
+
+Accounts are stored the same way orders are (`data/users.json`, a flat file) — the same Render free-tier caveat applies: it doesn't survive a redeploy. Move to a real database at the same time you move orders over.
+
 ## Adding a new door
 
 Add an entry to the `products` array in `data/doors.json` with a unique `id`, its `category` (`internal`, `external` or `steel` for now), a `basePrice`, an `image` filename (drop the SVG or photo into `public/images/`), and its four option groups. It'll appear in the catalog and configurator automatically — no code changes needed.
@@ -85,6 +110,5 @@ Add an entry to `categories` in `data/doors.json`, then add a category tile for 
 
 ## Still to customize
 
-- **Contact details**: the phone number and email in the footer of every page, and on the confirmation page, are placeholders — search for `+233 00 000 0000` and `hello@pxdoors.example` and replace them with PX Doors' real number and email.
 - **Product photos**: the catalog (15 products across the three categories) currently uses simple illustrated SVGs as placeholders. Swap the `image` field in `doors.json` for real product photos once you have them — JPG/PNG/WebP all work, just update the filename and drop the file into `public/images/`. No other code changes needed.
-- **`.env`**: copy `.env.example` to `.env` and fill in SMTP, WhatsApp and admin settings as you're ready to use them.
+- **`.env`**: copy `.env.example` to `.env` and fill in SMTP, WhatsApp, admin and account settings as you're ready to use them. `SESSION_SECRET` is worth setting even before Google sign-in is configured, so email/password accounts work properly.

@@ -67,7 +67,23 @@ function initCheckoutForm() {
   });
 }
 
+async function prefillFromAccount() {
+  const form = document.getElementById('checkout-form');
+  if (!form) return;
+  try {
+    const res = await fetch('/api/auth/me');
+    const { user } = await res.json();
+    if (user) {
+      if (!form.name.value) form.name.value = user.name;
+      if (!form.email.value) form.email.value = user.email;
+    }
+  } catch (e) {
+    // Not logged in or check failed — leave the form blank
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderCheckoutSummary();
   initCheckoutForm();
+  prefillFromAccount();
 });
