@@ -23,7 +23,7 @@ async function loadProduct() {
   }
   const { currency, product } = await res.json();
 
-  document.title = `${product.name} — PX Doors`;
+  document.title = `${product.name} — Pixelxcript Installations`;
 
   const selections = {};
   OPTION_GROUPS.forEach(g => { selections[g.key] = product.options[g.key][0]; });

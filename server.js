@@ -199,5 +199,5 @@ app.patch('/api/orders/:orderNumber', requireAdmin, (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`PX Doors running at http://localhost:${PORT}`);
+  console.log(`Pixelxcript Installations running at http://localhost:${PORT}`);
 });

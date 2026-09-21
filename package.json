@@ -1,7 +1,7 @@
 {
   "name": "px-doors",
   "version": "1.0.0",
-  "description": "PX Doors — sales and installation of internal, external and steel doors.",
+  "description": "Pixelxcript Installations — sales and installation of internal, external and steel doors.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

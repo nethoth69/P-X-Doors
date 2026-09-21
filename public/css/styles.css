@@ -111,12 +111,13 @@ button, .btn {
 
 .logo {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   display: flex;
   align-items: baseline;
   gap: 0.35rem;
+  white-space: nowrap;
 }
 
 .logo .mark {
