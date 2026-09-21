@@ -236,7 +236,7 @@ button, .btn {
   position: relative;
 }
 
-.hero-art svg { width: 100%; height: auto; }
+.hero-art img { width: 100%; height: auto; }
 
 /* trust strip */
 .trust-strip {
@@ -301,7 +301,7 @@ button, .btn {
   padding: 1.5rem;
 }
 
-.category-tile .tile-art svg { width: 60%; height: auto; }
+.category-tile .tile-art img { width: 60%; height: auto; }
 
 .category-tile h3 { margin-bottom: 0.4rem; }
 .category-tile p { font-size: 0.93rem; flex: 1; }
@@ -370,7 +370,7 @@ button, .btn {
   padding: 1.6rem;
 }
 
-.product-card .card-art svg { width: 55%; height: auto; }
+.product-card .card-art img { width: 55%; height: auto; }
 
 .product-card .card-body {
   padding: 1.4rem 1.4rem 1.6rem;
@@ -422,7 +422,7 @@ button, .btn {
   top: 100px;
 }
 
-.product-art svg { width: 65%; height: auto; }
+.product-art img { width: 65%; height: auto; }
 
 .product-info .category-tag {
   font-size: 0.85rem;
@@ -524,7 +524,7 @@ button, .btn {
   padding: 0.5rem;
 }
 
-.cart-item .thumb svg { width: 100%; }
+.cart-item .thumb img { width: 100%; }
 
 .cart-item .specs {
   font-size: 0.85rem;

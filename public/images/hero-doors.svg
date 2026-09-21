@@ -1,4 +1,4 @@
-<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 600 420" width="600" height="420" xmlns="http://www.w3.org/2000/svg">
 <rect x="30" y="60" width="150" height="320" fill="#FBF8F1" stroke="#23262B" stroke-width="3"/>
 <rect x="52" y="80" width="106" height="90" fill="none" stroke="#23262B" stroke-width="2"/>
 <rect x="52" y="190" width="106" height="150" fill="none" stroke="#23262B" stroke-width="2"/>
