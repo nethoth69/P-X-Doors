@@ -115,9 +115,14 @@ button, .btn {
   font-weight: 600;
   letter-spacing: 0.01em;
   display: flex;
-  align-items: baseline;
-  gap: 0.35rem;
+  align-items: center;
+  gap: 0.45rem;
   white-space: nowrap;
+}
+
+.logo-icon {
+  flex-shrink: 0;
+  display: block;
 }
 
 .logo .mark {
