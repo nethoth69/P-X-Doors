@@ -28,6 +28,16 @@ async function loadProduct() {
   const selections = {};
   OPTION_GROUPS.forEach(g => { selections[g.key] = product.options[g.key][0]; });
 
+  // Build the photo gallery from the finish options — each finish carries its
+  // own representative image. Skip the gallery entirely if every finish
+  // happens to share the same photo (nothing to actually choose between).
+  const galleryFiles = [...new Set(product.options.finish.map(o => o.image))];
+  const hasGallery = galleryFiles.length > 1;
+
+  function currentImage() {
+    return selections.finish.image;
+  }
+
   function currentTotal() {
     return OPTION_GROUPS.reduce((sum, g) => sum + selections[g.key].delta, product.basePrice);
   }
@@ -52,14 +62,30 @@ async function loadProduct() {
     `;
   }
 
+  function renderGallery() {
+    if (!hasGallery) return '';
+    return `
+      <div class="photo-gallery" id="photo-gallery">
+        ${product.options.finish.map(opt => `
+          <button type="button" class="gallery-thumb ${opt.id === selections.finish.id ? 'active' : ''}" data-finish-id="${opt.id}" title="${opt.label}">
+            <img src="images/${opt.image}" alt="${product.name} — ${opt.label}">
+          </button>
+        `).join('')}
+      </div>
+      <p class="field-hint" style="margin-top:0.6rem;">Pick the photo that matches the finish you want — it'll select that option for you.</p>
+    `;
+  }
+
   root.innerHTML = `
     <div class="product-art">
-      <img src="images/${product.image}" alt="${product.name}">
+      <img src="images/${currentImage()}" alt="${product.name}" id="main-product-image">
     </div>
     <div class="product-info">
       <span class="category-tag">${product.category.charAt(0).toUpperCase() + product.category.slice(1)} door</span>
       <h1>${product.name}</h1>
       <p>${product.summary}</p>
+
+      ${renderGallery()}
 
       <div class="spec-list">
         ${OPTION_GROUPS.map(renderSpecGroup).join('')}
@@ -78,6 +104,14 @@ async function loadProduct() {
     </div>
   `;
 
+  function syncImageAndGallery() {
+    document.getElementById('main-product-image').src = `images/${currentImage()}`;
+    if (!hasGallery) return;
+    document.querySelectorAll('.gallery-thumb').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.finishId === selections.finish.id);
+    });
+  }
+
   root.addEventListener('change', (e) => {
     const group = e.target.closest('.spec-group');
     if (!group) return;
@@ -85,14 +119,28 @@ async function loadProduct() {
     const opt = product.options[key].find(o => o.id === e.target.value);
     selections[key] = opt;
     document.getElementById('live-total').textContent = formatMoney(currentTotal(), currency);
+    if (key === 'finish') syncImageAndGallery();
   });
+
+  if (hasGallery) {
+    document.getElementById('photo-gallery').addEventListener('click', (e) => {
+      const btn = e.target.closest('.gallery-thumb');
+      if (!btn) return;
+      const finishId = btn.dataset.finishId;
+      const radio = root.querySelector(`input[name="finish"][value="${finishId}"]`);
+      if (radio) {
+        radio.checked = true;
+        radio.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+  }
 
   document.getElementById('add-to-cart-btn').addEventListener('click', () => {
     const cartItem = {
       productId: product.id,
       name: product.name,
       category: product.category,
-      image: product.image,
+      image: currentImage(),
       basePrice: product.basePrice,
       selections: { ...selections },
       lineTotal: currentTotal()

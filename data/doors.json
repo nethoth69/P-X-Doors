@@ -47,17 +47,20 @@
           {
             "id": "natural",
             "label": "Natural wood",
-            "delta": 0
+            "delta": 0,
+            "image": "door-internal-flush.svg"
           },
           {
             "id": "painted",
             "label": "White painted",
-            "delta": 40
+            "delta": 40,
+            "image": "door-internal-flush-painted.svg"
           },
           {
             "id": "walnut",
             "label": "Walnut stain",
-            "delta": 60
+            "delta": 60,
+            "image": "door-internal-flush-walnut.svg"
           }
         ],
         "installation": [
@@ -125,17 +128,20 @@
           {
             "id": "natural",
             "label": "Natural wood",
-            "delta": 0
+            "delta": 0,
+            "image": "door-internal-panel.svg"
           },
           {
             "id": "painted",
             "label": "White painted",
-            "delta": 40
+            "delta": 40,
+            "image": "door-internal-panel-painted.svg"
           },
           {
             "id": "walnut",
             "label": "Walnut stain",
-            "delta": 60
+            "delta": 60,
+            "image": "door-internal-panel-walnut.svg"
           }
         ],
         "installation": [
@@ -203,17 +209,20 @@
           {
             "id": "natural",
             "label": "Natural wood",
-            "delta": 0
+            "delta": 0,
+            "image": "door-internal-glazed.svg"
           },
           {
             "id": "painted",
             "label": "White painted",
-            "delta": 40
+            "delta": 40,
+            "image": "door-internal-glazed-painted.svg"
           },
           {
             "id": "walnut",
             "label": "Walnut stain",
-            "delta": 60
+            "delta": 60,
+            "image": "door-internal-glazed-walnut.svg"
           }
         ],
         "installation": [
@@ -281,17 +290,20 @@
           {
             "id": "natural",
             "label": "Natural wood",
-            "delta": 0
+            "delta": 0,
+            "image": "door-external-timber.svg"
           },
           {
             "id": "painted",
             "label": "Painted – any colour",
-            "delta": 90
+            "delta": 90,
+            "image": "door-external-timber-painted.svg"
           },
           {
             "id": "weather",
             "label": "Weatherproof stain",
-            "delta": 70
+            "delta": 70,
+            "image": "door-external-timber-weather.svg"
           }
         ],
         "installation": [
@@ -359,17 +371,20 @@
           {
             "id": "natural",
             "label": "Woodgrain finish",
-            "delta": 0
+            "delta": 0,
+            "image": "door-external-composite.svg"
           },
           {
             "id": "painted",
             "label": "Painted – any colour",
-            "delta": 90
+            "delta": 90,
+            "image": "door-external-composite-painted.svg"
           },
           {
             "id": "weather",
             "label": "Weatherproof stain",
-            "delta": 70
+            "delta": 70,
+            "image": "door-external-composite-weather.svg"
           }
         ],
         "installation": [
@@ -437,17 +452,20 @@
           {
             "id": "natural",
             "label": "Natural wood",
-            "delta": 0
+            "delta": 0,
+            "image": "door-external-french.svg"
           },
           {
             "id": "painted",
             "label": "Painted – any colour",
-            "delta": 120
+            "delta": 120,
+            "image": "door-external-french-painted.svg"
           },
           {
             "id": "weather",
             "label": "Weatherproof stain",
-            "delta": 100
+            "delta": 100,
+            "image": "door-external-french-weather.svg"
           }
         ],
         "installation": [
@@ -515,17 +533,20 @@
           {
             "id": "grey",
             "label": "Matte grey powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-standard.svg"
           },
           {
             "id": "black",
             "label": "Black powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-standard-black.svg"
           },
           {
             "id": "custom",
             "label": "Custom colour powder-coat",
-            "delta": 120
+            "delta": 120,
+            "image": "door-steel-standard-custom.svg"
           }
         ],
         "installation": [
@@ -593,17 +614,20 @@
           {
             "id": "grey",
             "label": "Matte grey powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-reinforced.svg"
           },
           {
             "id": "black",
             "label": "Black powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-reinforced-black.svg"
           },
           {
             "id": "custom",
             "label": "Custom colour powder-coat",
-            "delta": 140
+            "delta": 140,
+            "image": "door-steel-reinforced-custom.svg"
           }
         ],
         "installation": [
@@ -671,17 +695,20 @@
           {
             "id": "grey",
             "label": "Matte grey powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-vision.svg"
           },
           {
             "id": "black",
             "label": "Black powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-vision-black.svg"
           },
           {
             "id": "custom",
             "label": "Custom colour powder-coat",
-            "delta": 120
+            "delta": 120,
+            "image": "door-steel-vision-custom.svg"
           }
         ],
         "installation": [
@@ -749,17 +776,20 @@
           {
             "id": "natural",
             "label": "Natural wood",
-            "delta": 0
+            "delta": 0,
+            "image": "door-internal-sliding.svg"
           },
           {
             "id": "painted",
             "label": "White painted",
-            "delta": 40
+            "delta": 40,
+            "image": "door-internal-sliding-painted.svg"
           },
           {
             "id": "walnut",
             "label": "Walnut stain",
-            "delta": 60
+            "delta": 60,
+            "image": "door-internal-sliding-walnut.svg"
           }
         ],
         "installation": [
@@ -827,17 +857,20 @@
           {
             "id": "natural",
             "label": "Natural wood",
-            "delta": 0
+            "delta": 0,
+            "image": "door-internal-barn.svg"
           },
           {
             "id": "painted",
             "label": "White painted",
-            "delta": 40
+            "delta": 40,
+            "image": "door-internal-barn-painted.svg"
           },
           {
             "id": "walnut",
             "label": "Walnut stain",
-            "delta": 60
+            "delta": 60,
+            "image": "door-internal-barn-walnut.svg"
           }
         ],
         "installation": [
@@ -905,17 +938,20 @@
           {
             "id": "natural",
             "label": "Natural wood",
-            "delta": 0
+            "delta": 0,
+            "image": "door-external-hybrid.svg"
           },
           {
             "id": "painted",
             "label": "Painted – any colour",
-            "delta": 90
+            "delta": 90,
+            "image": "door-external-hybrid-painted.svg"
           },
           {
             "id": "weather",
             "label": "Weatherproof stain",
-            "delta": 70
+            "delta": 70,
+            "image": "door-external-hybrid-weather.svg"
           }
         ],
         "installation": [
@@ -983,17 +1019,20 @@
           {
             "id": "natural",
             "label": "Natural wood",
-            "delta": 0
+            "delta": 0,
+            "image": "door-external-louvered.svg"
           },
           {
             "id": "painted",
             "label": "Painted – any colour",
-            "delta": 90
+            "delta": 90,
+            "image": "door-external-louvered-painted.svg"
           },
           {
             "id": "weather",
             "label": "Weatherproof stain",
-            "delta": 70
+            "delta": 70,
+            "image": "door-external-louvered-weather.svg"
           }
         ],
         "installation": [
@@ -1061,17 +1100,20 @@
           {
             "id": "grey",
             "label": "Matte grey powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-cladding.svg"
           },
           {
             "id": "black",
             "label": "Black powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-cladding-black.svg"
           },
           {
             "id": "custom",
             "label": "Custom colour powder-coat",
-            "delta": 120
+            "delta": 120,
+            "image": "door-steel-cladding-custom.svg"
           }
         ],
         "installation": [
@@ -1139,17 +1181,20 @@
           {
             "id": "grey",
             "label": "Matte grey powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-utility.svg"
           },
           {
             "id": "black",
             "label": "Black powder-coat",
-            "delta": 0
+            "delta": 0,
+            "image": "door-steel-utility-black.svg"
           },
           {
             "id": "custom",
             "label": "Custom colour powder-coat",
-            "delta": 120
+            "delta": 120,
+            "image": "door-steel-utility-custom.svg"
           }
         ],
         "installation": [

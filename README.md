@@ -102,6 +102,12 @@ If those two variables are left blank, the "Continue with Google" button automat
 
 Accounts are stored the same way orders are (`data/users.json`, a flat file) — the same Render free-tier caveat applies: it doesn't survive a redeploy. Move to a real database at the same time you move orders over.
 
+### Finish photo gallery
+
+Each finish option in `data/doors.json` carries its own `image`. On the product page, this shows as a row of clickable photo thumbnails below the description — clicking one both previews it and selects that finish (and picking a finish from the list updates the preview photo too; the two stay in sync). This is how a customer confirms "yes, that's the exact one" before adding it to cart — the chosen photo travels with the order through cart, checkout, admin and the order email.
+
+Right now these are the same illustrated SVG placeholders, just recolored per finish (e.g. a walnut-stained version, a painted white version). When real product photos are ready, replace each finish option's `image` with the matching photo filename — no code changes needed. If a future product's finish options all point to the same file, the gallery just doesn't render for that product (nothing to choose between) — give it distinct images per finish and the gallery appears automatically.
+
 ## Adding a new door
 
 Add an entry to the `products` array in `data/doors.json` with a unique `id`, its `category` (`internal`, `external` or `steel` for now), a `basePrice`, an `image` filename (drop the SVG or photo into `public/images/`), and its four option groups. It'll appear in the catalog and configurator automatically — no code changes needed.

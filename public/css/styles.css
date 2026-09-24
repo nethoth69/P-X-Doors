@@ -435,6 +435,38 @@ button, .btn {
   color: var(--brass-dark);
 }
 
+.photo-gallery {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1.4rem;
+}
+
+.gallery-thumb {
+  width: 56px;
+  height: 68px;
+  padding: 0;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.gallery-thumb:hover { border-color: var(--brass); }
+
+.gallery-thumb.active {
+  border-color: var(--rust);
+  box-shadow: 0 0 0 1px var(--rust);
+}
+
 .spec-list {
   border-top: 1px solid var(--line);
   margin-top: 2rem;
@@ -659,18 +691,6 @@ form textarea { min-height: 100px; resize: vertical; }
 
 .site-footer p, .site-footer a { color: #C9C3B4; font-size: 0.9rem; }
 .site-footer a:hover { color: var(--white); }
-
-.pixelxcript-badge {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 1.1rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid #454B50;
-}
-
-.pixelxcript-badge img { flex-shrink: 0; }
-.pixelxcript-badge span { font-size: 0.82rem; color: #9A9484; }
 
 .site-footer .foot-bottom {
   border-top: 1px solid #454B50;
