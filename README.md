@@ -1,6 +1,6 @@
-# Pixelxcript Installations
+# Pixelxcript
 
-(formerly "PX Doors" — code, file names, and infrastructure like the GitHub repo and live URL still use the old `px-doors` name; see the note at the bottom of this file.)
+(formerly branded "PX Doors", then briefly "Pixelxcript Installations" — code, file names, and infrastructure like the GitHub repo and live URL still use the original `px-doors` name; see the note at the bottom of this file.)
 
 A storefront for selling internal, external and steel doors, where every door can include installation and an after-service care plan chosen at checkout. Built as a small Express backend + plain HTML/CSS/JS frontend — no build step, no framework.
 
@@ -123,4 +123,4 @@ Add an entry to `categories` in `data/doors.json`, then add a category tile for 
 
 ## A note on the name
 
-The site now displays as **Pixelxcript Installations** everywhere a visitor sees it (header, page titles, emails, admin area). The underlying project — the GitHub repo (`P-X-Doors`), the folder name, the live URL (`px-doors.onrender.com`), npm package name, and internal file names like `data/doors.json` — still use the original `px-doors` / "PX Doors" naming. Renaming those would change the live URL and break the Google OAuth login (which is registered against `px-doors.onrender.com`), so that's a separate, deliberate decision rather than an oversight. See the project notes if that ever needs to change too.
+The site now displays as **Pixelxcript** everywhere a visitor sees it (header, page titles, emails, admin area). The underlying project — the GitHub repo (`P-X-Doors`), the folder name, the live URL (`px-doors.onrender.com`), npm package name, and internal file names like `data/doors.json` — still use the original `px-doors` / "PX Doors" naming. Renaming those would change the live URL and break the Google OAuth login (which is registered against `px-doors.onrender.com`), so that's a separate, deliberate decision rather than an oversight. See the project notes if that ever needs to change too.
